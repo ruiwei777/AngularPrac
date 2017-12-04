@@ -1,0 +1,11 @@
+
+<div>
+  <p *ngIf='lastVoterName; else noVoter'>{{ lastVoterName }} has just voted!</p>
+  <p>The voting result is: {{ results }}</p>
+</div>
+
+<div>
+  <voter *ngFor='let name of voters' [name]='name' (onVoted)='onVoted($event)'></voter>
+</div>
+
+<ng-template #noVoter><p>Nobody has voted yet.</p></ng-template>

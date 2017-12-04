@@ -4,8 +4,8 @@ import { Location } from '@angular/common';
 
 import 'rxjs/add/operator/switchMap';
 
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'hero-detail',
@@ -33,8 +33,8 @@ export class HeroDetailComponent implements OnInit{
 
 
     ngOnInit(): void{
-        this.route.paramMap
+        this.route.paramMap    // Observable<ParamMap>
         .switchMap((params: ParamMap) => this.heroService.getHero(+params.get('id')))
-        .subscribe(hero => this.hero = hero)
+        .subscribe(hero => this.hero = hero)    
     }
 }

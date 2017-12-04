@@ -10,11 +10,13 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroesComponent } from './heroes.component';
-import { HeroSearchComponent } from './hero-search.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { HeroService } from './hero.service';
+import { VoterComponent } from './voter/voter.component';
+import { VoteTakerComponent } from './vote-taker/vote-taker.component';
 
 
 
@@ -31,7 +33,9 @@ import { HeroService } from './hero.service';
         DashboardComponent,
         HeroDetailComponent,
         HeroesComponent,
-        HeroSearchComponent
+        HeroSearchComponent,
+        VoterComponent,
+        VoteTakerComponent,
     ],
 
     providers: [HeroService],

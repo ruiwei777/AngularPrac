@@ -1,0 +1,5 @@
+<div>
+  <p>{{ name }}</p>
+  <button (click)='vote(true)' [disabled]='voted'> Agree </button>
+  <button (click)='vote(false)' [disabled]='voted'> Disagree </button>
+</div>
